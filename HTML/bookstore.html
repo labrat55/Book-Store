@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookStore</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bookstore.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="logo">
+    <img class="logoimage" src="../image/kobae.png">
+    <p class="bookstore">Book Store</p>
+
+    <input type="text" id="myInput" placeholder="Search by Titulo..." />
+    
+    <ul id="myUL">
+      
+    </ul>
+
+  </div>
+
+  <hr class="style-two">
+  <div id="maincontent">
+
+    <div id="flip3D" v-for="text in book">
+      <div class="back">
+
+        <h4>{{text.titulo}}</h4>
+        <p>{{text.descripcion}}
+        </p>
+        <button data-fancybox="gallery" :href="text.detalle">Mas Info</button>
+      </div>
+      <div class="front">
+        <img v-bind:src="text.portada" /></div>
+    </div>
+
+  </div>
+  <!--
+
+  <p>
+    <a id="test" href="javascript" class="btn btn-primary">Click me</a>
+  </p>
+-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="../js/bookstore.js"></script>
+</body>
+
+</html>
